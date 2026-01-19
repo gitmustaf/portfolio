@@ -15,11 +15,11 @@ const Sidebar = () => {
   return (
     <div className="md:relative">
       <div className="md:hidden absolute top-0 left-0 z-20">
-        <button onClick={() => setIsOpen(!isOpen)} className="text-white p-4">
+        <button onClick={() => setIsOpen(!isOpen)} className="text-black p-4">
           <svg
             className="w-6 h-6"
             fill="none"
-            stroke="white"
+            stroke="black"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -112,3 +112,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+  
