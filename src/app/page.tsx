@@ -1,12 +1,27 @@
-export default function Home() {
-  return (
-    <div className="flex min-h-screen">
-      <main className="flex-1 p-8">
-        <h1 className="text-2xl font-bold">Welcome to my portfolio</h1>
-        <p className="mt-4">
-          This is the home page of my portfolio.
-        </p>
-      </main>
-    </div>
-  );
-}
+// import { Toaster } from "@/components/ui/toaster";
+// import { Toaster as Sonner } from "@/components/ui/sonner";
+// import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "../components/pages/Index";
+// import NotFound from "./pages/NotFound";
+
+const queryClient = new QueryClient();
+
+const Home = () => (
+  <QueryClientProvider client={queryClient}>
+    {/* <TooltipProvider> */}
+      {/* <Toaster /> */}
+      {/* <Sonner /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+      </BrowserRouter>
+    {/* </TooltipProvider> */}
+  </QueryClientProvider>
+);
+
+export default Home;
