@@ -6,6 +6,12 @@ export default function Home() {
         <p className="mt-4">
           This is the home page of my portfolio.
         </p>
+        <a 
+        href="/resume.pdf"
+        download="mustaf_hussain_resume.pdf"
+        >
+          Download Resume
+        </a>
       </main>
     </div>
   );
